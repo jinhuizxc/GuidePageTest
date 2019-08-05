@@ -1,0 +1,20 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/bt_liulishuo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="流利说效果"/>
+
+    <Button
+        android:id="@+id/bt_splash"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Android 启动页与广告页"/>
+
+
+
+</LinearLayout>
