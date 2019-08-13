@@ -10,6 +10,8 @@ import android.widget.Spinner;
 import com.blankj.utilcode.util.ActivityUtils;
 import com.example.adlibrary.bean.AdInfo;
 import com.example.guidepagetest.ad_dialog.AdActivity;
+import com.example.guidepagetest.intro.SplashActivity;
+import com.example.guidepagetest.intro1.Splash1Activity;
 import com.example.guidepagetest.liulishuo.LiuLiShuoActivity;
 
 import java.util.List;
@@ -37,6 +39,9 @@ import butterknife.OnClick;
  * <p>
  * 一个简单，强大的广告活动弹窗控件
  * https://github.com/yipianfengye/android-adDialog
+ *
+ * # ViewPager实现引导页
+ * https://github.com/LRH1993/CustomViewPager
  */
 public class MainActivity extends AppCompatActivity {
 
@@ -46,6 +51,8 @@ public class MainActivity extends AppCompatActivity {
     Button btSplash;
     @BindView(R.id.bt_adDialog)
     Button btAdDialog;
+    @BindView(R.id.bt_splash1)
+    Button btSplash1;
 
 
     @Override
@@ -55,16 +62,20 @@ public class MainActivity extends AppCompatActivity {
         ButterKnife.bind(this);
     }
 
-    @OnClick({R.id.bt_liulishuo, R.id.bt_splash, R.id.bt_adDialog})
+    @OnClick({R.id.bt_liulishuo, R.id.bt_splash, R.id.bt_adDialog, R.id.bt_splash1})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.bt_liulishuo:
                 ActivityUtils.startActivity(LiuLiShuoActivity.class);
                 break;
-            case R.id.bt_splash:
-                break;
             case R.id.bt_adDialog:
                 ActivityUtils.startActivity(AdActivity.class);
+                break;
+            case R.id.bt_splash:
+                ActivityUtils.startActivity(SplashActivity.class);
+                break;
+            case R.id.bt_splash1:
+                ActivityUtils.startActivity(Splash1Activity.class);
                 break;
         }
     }

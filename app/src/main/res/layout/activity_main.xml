@@ -13,7 +13,13 @@
         android:id="@+id/bt_splash"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Android启动页与广告页"/>
+        android:text="App引导页1"/>
+
+    <Button
+        android:id="@+id/bt_splash1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="App引导页2"/>
 
     <Button
         android:id="@+id/bt_adDialog"

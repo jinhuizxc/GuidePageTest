@@ -4,6 +4,7 @@
     package="com.example.guidepagetest">
 
     <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:name=".App"
@@ -21,10 +22,18 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity
             android:name=".liulishuo.LiuLiShuoActivity"
-            android:theme="@style/LiulishuoTheme" />
+            android:theme="@style/AppNoActionBarTheme" />
+
         <activity android:name=".ad_dialog.AdActivity"/>
+
+        <activity android:name=".intro.SplashActivity"
+            android:theme="@style/AppNoActionBarTheme"/>
+
+        <activity android:name=".intro1.Splash1Activity"
+            android:theme="@style/SplashTheme"/>
     </application>
 
 </manifest>
