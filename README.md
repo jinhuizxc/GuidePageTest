@@ -6,4 +6,6 @@
 - 视频展示效果
 - 蘑菇街效果
 - AdDialog效果
+- [GuideVideoPager](https://github.com/Giousa/GuideVideoPager)
+
 

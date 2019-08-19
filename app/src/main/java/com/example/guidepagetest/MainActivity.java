@@ -4,17 +4,15 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
-import android.widget.Spinner;
 
 import com.blankj.utilcode.util.ActivityUtils;
-import com.example.adlibrary.bean.AdInfo;
+import com.blankj.utilcode.util.ToastUtils;
 import com.example.guidepagetest.ad_dialog.AdActivity;
 import com.example.guidepagetest.intro.SplashActivity;
 import com.example.guidepagetest.intro1.Splash1Activity;
 import com.example.guidepagetest.liulishuo.LiuLiShuoActivity;
-
-import java.util.List;
+import com.example.guidepagetest.video.VideoActivity;
+import com.example.guidepagetest.video.lazyload.Video1Activity;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -39,7 +37,7 @@ import butterknife.OnClick;
  * <p>
  * 一个简单，强大的广告活动弹窗控件
  * https://github.com/yipianfengye/android-adDialog
- *
+ * <p>
  * # ViewPager实现引导页
  * https://github.com/LRH1993/CustomViewPager
  */
@@ -53,6 +51,12 @@ public class MainActivity extends AppCompatActivity {
     Button btAdDialog;
     @BindView(R.id.bt_splash1)
     Button btSplash1;
+    @BindView(R.id.bt_video)
+    Button btVideo;
+    @BindView(R.id.bt_video1)
+    Button btVideo1;
+    @BindView(R.id.bt_video_net)
+    Button btVideoNet;
 
 
     @Override
@@ -62,7 +66,8 @@ public class MainActivity extends AppCompatActivity {
         ButterKnife.bind(this);
     }
 
-    @OnClick({R.id.bt_liulishuo, R.id.bt_splash, R.id.bt_adDialog, R.id.bt_splash1})
+    @OnClick({R.id.bt_liulishuo, R.id.bt_splash, R.id.bt_adDialog,
+            R.id.bt_splash1, R.id.bt_video, R.id.bt_video_net,R.id.bt_video1})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.bt_liulishuo:
@@ -77,6 +82,17 @@ public class MainActivity extends AppCompatActivity {
             case R.id.bt_splash1:
                 ActivityUtils.startActivity(Splash1Activity.class);
                 break;
+            case R.id.bt_video:
+                ActivityUtils.startActivity(VideoActivity.class);
+                break;
+            case R.id.bt_video1:
+                ActivityUtils.startActivity(Video1Activity.class);
+                break;
+            case R.id.bt_video_net:
+                ToastUtils.showShort("video net");
+//                ActivityUtils.startActivity(VideoActivity.class);
+                break;
+
         }
     }
 
